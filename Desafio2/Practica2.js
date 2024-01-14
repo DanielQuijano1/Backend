@@ -95,13 +95,14 @@ class Product {
 //Testing
 
 //se crean nuevos productos
-const producto1 = new Product('FF001',"Funda mototola g8",250,[],500,"fundas","funda para motorola g8")
-const producto2 = new Product('FF002',"Funda mototola g8 power",250,[],500,"fundas","funda para motorola g8 power")
-const producto3 = new Product('FF003',"Funda mototola g8 plus",250,[],500,"fundas","funda para motorola g8 plus")
-
+const producto1 = new Product('FF001', "Funda mototola g8", 250, [], 500, "fundas", "funda para motorola g8")
+const producto2 = new Product('FF002', "Funda mototola g8 power", 250, [], 500, "fundas", "funda para motorola g8 power")
+const producto3 = new Product('FF003', "Funda mototola g8 plus", 250, [], 500, "fundas", "funda para motorola g8 plus")
+*/
 // se crea la instancia Product Manager
-const adminProduct = new ProductManager();
+const adminProduct = new ProductManager("./Desafio2/productos.json");
 
+/*
 //se llama a getProducts la cual debe devolver un arreglo vacio
 console.log(adminProduct.getProducts());
 
@@ -109,6 +110,7 @@ console.log(adminProduct.getProducts());
 adminProduct.addProduct(producto1)
 adminProduct.addProduct(producto2)
 adminProduct.addProduct(producto3)
+
 
 //se llama a getProducts de nuevo, esta vez tiene que aparecer el producto ya creado
 console.log(adminProduct.getProducts());
@@ -119,5 +121,23 @@ adminProduct.addProduct(producto2)
 //se evalua getProductsByID para devuelva error si no encuentra el producto, de caso contrario se devuelve el producto
 console.log(adminProduct.getProductsByID(15));
 
-console.log(adminProduct.getProductsByID(1));
 
+//se llama a updateProduct para actualizar la data de uno de los productos
+const productoActualizado =
+{
+    code: "FF003",
+    title: "Funda mototola g8 plus lite",
+    price: 250,
+    thumbnail: [],
+    stock: 50,
+    category: "fundas",
+    description: "funda para motorola g8 plus lite",
+}
+
+adminProduct.updateProduct(2, productoActualizado )
+*/
+// adminProduct.deleteProduct(2)
+
+//se evalua update del producto 2 con getProductsByID
+console.log(adminProduct.getProducts());
+// console.log(adminProduct.getProductsByID(2));
