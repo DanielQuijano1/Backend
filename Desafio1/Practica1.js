@@ -8,7 +8,7 @@ class ProductManager {
         const producto = this.products.find(e => e.code === product.code)
 
         if (producto) {
-            console.log("EL producto ya está en el inventario")
+            return("EL producto ya está en el inventario")
         } else {
             this.products.push(product)
         }
@@ -16,16 +16,16 @@ class ProductManager {
 
 
     getProducts() {
-        console.log(this.products)
+        return(this.products)
     }
 
     getProductsByID(id) {
         const resultadoID = this.products.find(e => e.id === id)
 
         if (resultadoID) {
-            console.log(resultadoID)
+            return(resultadoID)
         } else {
-            console.log("Producto no Encontrado")
+            return("Producto no Encontrado")
         }
     }
 }
